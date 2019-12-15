@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^2.11.0",
+    "fastify-cors": "^3.0.0",
     "fastify-formbody": "^3.1.0",
     "fastify-mongoose-api": "^1.0.12",
     "mongoose": "^5.8.1",
