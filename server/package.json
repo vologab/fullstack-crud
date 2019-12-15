@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start:dev": "node -r dotenv/config index.js",
-    "format": "prettier *.js --write"
+    "start": "node src/index.js",
+    "start:dev": "node -r dotenv/config src/index.js",
+    "format": "prettier **/*.js --write"
   },
   "author": "",
   "license": "ISC",
