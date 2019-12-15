@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+  client:
+    build:
+      context: ./client
+      args:
+        REACT_APP_API_URL: /api
+    ports:
+      - '80:80'
+    depends_on:
+      - backend
+    networks:
+      - crud
+  backend:
+    build:
+      context: ./server
+    expose:
+      - '3000'
+    environment:
+      PORT: 3000
+      MONGODB_URL: mongodb://db:27017/arrival
+    depends_on:
+      - db
+    networks:
+      - crud
+  db:
+    image: mongo:4.2
+    expose:
+      - '27017'
+    networks:
+      - crud
+
+networks:
+  crud:
